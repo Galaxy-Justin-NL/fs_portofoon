@@ -26,3 +26,6 @@ pma-voice (Cruciaal voor de spraakverbinding)
 ox_lib (Voor de menu's en notificaties)
 
 ox_inventory (Voor het radio-item)
+
+
+Gemaakt door Galaxy_justin - Onderdeel van de Fs-Series Scripts.
