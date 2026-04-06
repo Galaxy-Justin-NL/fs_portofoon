@@ -1,0 +1,44 @@
+📥 Installatie
+Download de resource en plaats de map fs_radio in je resources folder.
+
+Item Toevoegen: Voeg het radio-item toe aan ox_inventory/data/items.lua:
+
+Lua
+['radio'] = {
+    label = 'Portofoon',
+    weight = 1000,
+    stack = false,
+    close = true,
+    description = 'Een draagbare radio voor communicatie op afstand.'
+},
+Configuratie: Open config.lua om de job-beperkte kanalen aan te passen:
+
+Lua
+Config.RestrictedChannels = {
+    [1] = { job = 'police', label = 'Politie Hoofdkanaal' },
+    [2] = { job = 'ambulance', label = 'Ambulance Ops' },
+}
+Server Starten: Voeg dit toe aan je server.cfg:
+
+Codefragment
+ensure pma-voice
+ensure fs_radio
+🎮 Bediening
+Zorg dat je een Portofoon in je rugzak hebt.
+
+Gebruik het item of gebruik de ingestelde hotkey (standaard SHIFT + G) om de radio te openen.
+
+Type het gewenste kanaalnummer in en druk op Verbinden.
+
+Gebruik je spraaktoets (standaard CAPSLOCK) om te communiceren.
+
+⚙️ Voice Settings (Belangrijk!)
+Voor de beste ervaring moet pma-voice goed ingesteld staan in je server.cfg:
+
+Codefragment
+setr voice_useNativeAudio true
+setr voice_useSendingRangeOnly true
+setr voice_defaultCycle "Z"
+setr voice_defaultRadioVolume 0.5
+
+Gemaakt door Galaxy_justin - Onderdeel van de Fs-Series Scripts.
